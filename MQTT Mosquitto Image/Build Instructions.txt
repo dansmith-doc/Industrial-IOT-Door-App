@@ -1,0 +1,18 @@
+Navigate to folder containing Dockerfile and RUN
+
+    "docker build Dockerfile ."
+
+RUN docker command to RUN a container exposing ports and create persistent volumes on the host.
+
+    "docker run -it -p 1883:1883 -p 9001:9001 -v config:/mosquitto/config/ -v /mosquitto/data -v /mosquitto/log eclipse-mosquitto"
+    
+Navigate to foldler containing mosquitto.conf to set Authentication and RUN 
+
+    "mosquitto_passwd [password file name] [username]" , then enter password 2x to confirm.
+
+Open mosquitto.conf and ADD.
+
+    "listerner [port number]"
+    "password_file [path to password_file]
+
+Save and restart Docker container.
