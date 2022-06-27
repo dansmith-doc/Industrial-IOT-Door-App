@@ -1,3 +1,5 @@
+
+#mosquitto mqtt setup
 Navigate to folder containing Dockerfile and RUN
 
     "docker build Dockerfile ."
