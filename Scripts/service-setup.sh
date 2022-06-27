@@ -24,6 +24,6 @@ echo "Done"
 sleep 10
 
 echo "Creating Main Console Service... 5/5" 
-docker service create -d --name main-console -publish 1880:1880 -volume main-console-production-data:/data -network=production -replicas 5 main-console
+docker service create -d --name main-console -publish 1880:1880 -volume main-console-production-data:/data -network=production -replicas 2 main-console
 echo "All Done"
 sleep 10
